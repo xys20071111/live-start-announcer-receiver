@@ -1,0 +1,19 @@
+{
+    "name": "bla.xys",
+    "description": "接受弹幕机器人插件推送的直播开始通知",
+    "architecture": "@CLICK_ARCH@",
+    "title": "B站直播开始通知",
+    "hooks": {
+        "main": {
+            "apparmor": "bla.apparmor",
+            "desktop":  "bla.desktop"
+        },
+        "push": {
+            "apparmor": "push-apparmor.json",
+            "push-helper": "push.json"
+        }
+    },
+    "version": "1.0.0",
+    "maintainer": "Tom Xue <xys20071111@hotmail.com>",
+    "framework" : "@CLICK_FRAMEWORK@"
+}

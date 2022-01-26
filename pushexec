@@ -1,0 +1,15 @@
+#!/usr/bin/python3
+
+import sys
+import json
+import urllib.parse
+import os
+
+f1, f2 = sys.argv[1:3]
+notification_file = open(f1)
+notification_result = open(f2, mode="w", encoding="utf8")
+notification = json.load(notification_file)
+notification['notification']['card']['summary'] = urllib.parse.unquote(notification['notification']['card']['summary'], encoding='utf-8')
+notification['notification']['card']['body'] = urllib.parse.unquote(notification['notification']['card']['body'], encoding='utf-8')
+
+notification_result.write(json.dumps(notification).encode('utf-8').decode('unicode_escape'))

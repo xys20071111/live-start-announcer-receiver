@@ -1,0 +1,7 @@
+[Desktop Entry]
+_Name=B站直播开始通知
+Exec=qmlscene %U qml/Main.qml
+Icon=assets/logo.svg
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
