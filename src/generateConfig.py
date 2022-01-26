@@ -5,6 +5,6 @@ def generate(port, api_token, push_token):
                 "push_app": "bla.xys_main",
                 "api_token": api_token,
                 "push_token": push_token,
-                "api_port": port
+                "api_port": int(port)
             }
         json.dump(data, f)
